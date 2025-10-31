@@ -1,0 +1,12 @@
+# LEARN_LOG — modèle
+# Ajoute des entrées sous forme de blocs YAML séparés par '---'
+---
+task_id: "uuid-or-date"
+agent: "router|broker|manager|vincent_prospection"
+goal: "..."
+context_snippet: "..."
+what_worked: ["..."]
+what_failed: ["..."]
+user_feedback: "..."
+next_idea: "..."
+timestamp: "YYYY-MM-DDThh:mm"

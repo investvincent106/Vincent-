@@ -1,0 +1,125 @@
+meta:
+  name: "Vincent Booster Pack — KPI Reference"
+  owner: "Vincent"
+  last_review: "2025-10-29"
+  notes: "Table de vérité des KPIs : cibles, définitions et sources de mesure."
+
+kpis:
+
+  # =========================
+  # 1) Performance (flux)
+  # =========================
+  - key: auto_boot_rate
+    label: "Taux d’exécution automatique (boot_sequence)"
+    target: ">= 0.95"
+    severity: "high"
+    source: "metrics/kpi_log.json:performance.auto_boot_rate"
+    definition: "Proportion des sessions qui démarrent via prompts/system/boot_sequence.md sans intervention."
+    remediation: "Vérifier connecteur GitHub actif, chemins stables, init_vincent.md accessible."
+
+  - key: startup_time_seconds
+    label: "Temps de démarrage (sec)"
+    target: "<= 10"
+    severity: "medium"
+    source: "metrics/kpi_log.json:performance.startup_time_seconds"
+    definition: "Délai entre ouverture de session et message '✅ Booster Pack chargé'."
+    remediation: "Réduire fichiers chargés au boot, vérifier latence réseau."
+
+  - key: routine_completion_rate
+    label: "Taux de routine quotidienne complétée"
+    target: ">= 0.90"
+    severity: "high"
+    source: "metrics/kpi_log.json:performance.routine_completion_rate"
+    definition: "Proportion des sessions où playbooks/02_daily_workflow_sync_prod.md est mené à terme."
+    remediation: "Raccourcir le playbook, supprimer friction, proposer GO direct."
+
+  - key: response_latency_seconds
+    label: "Latence moyenne IA (sec)"
+    target: "<= 3"
+    severity: "medium"
+    source: "metrics/kpi_log.json:performance.response_latency_seconds"
+    definition: "Temps moyen de réponse aux requêtes contextuelles."
+    remediation: "Limiter contexte superflu, découper tâches, éviter surlong prompts."
+
+  - key: connector_uptime
+    label: "Stabilité connecteur GitHub"
+    target: "== 1.0"
+    severity: "high"
+    source: "metrics/kpi_log.json:performance.connector_uptime"
+    definition: "Disponibilité (1.0 = aucune coupure > 24h)."
+    remediation: "Reconnecter le repo, vérifier permissions, éviter renommages de chemins."
+
+  # =========================
+  # 2) Adoption (usage)
+  # =========================
+  - key: weekly_active_sessions
+    label: "Sessions actives / semaine"
+    target: ">= 5"
+    severity: "medium"
+    source: "metrics/kpi_log.json:adoption.weekly_active_sessions"
+    definition: "Nombre de jours avec au moins 1 session IA effective."
+    remediation: "Auto-boot quotidien + rappel soft via routine."
+
+  - key: user_feedback_score
+    label: "Score feedback utilisateur (1–5)"
+    target: ">= 4.0"
+    severity: "medium"
+    source: "metrics/kpi_log.json:adoption.user_feedback_score"
+    definition: "Note perçue de l’utilité globale (mini-form rapide)."
+    remediation: "Affiner ton/structures, ajouter raccourcis, désencombrer."
+
+  - key: new_prompts_per_month
+    label: "Nouveaux scénarios / mois"
+    target: ">= 1"
+    severity: "low"
+    source: "metrics/kpi_log.json:adoption.new_prompts_per_month"
+    definition: "Évolution organique du pack (amélioration continue)."
+    remediation: "Ajouter un mini backlog prompts, revue mensuelle."
+
+  # =========================
+  # 3) Qualité de sortie
+  # =========================
+  - key: time_saved_minutes_per_task
+    label: "Temps gagné / tâche (min)"
+    target: ">= 20"
+    severity: "medium"
+    source: "metrics/kpi_log.json:output.time_saved_minutes_per_task"
+    definition: "Différence avant/après pour emails, briefs, notes→actions."
+    remediation: "Renforcer templates, clarifier consignes d’édition, auto-sélection du bon scénario."
+
+  - key: acceptance_rate
+    label: "Taux d’acceptation sans retouche"
+    target: ">= 0.85"
+    severity: "high"
+    source: "metrics/kpi_log.json:output.acceptance_rate"
+    definition: "Part des livrables validés directement par Vincent/clients."
+    remediation: "Aligner ton, réduire jargon, ajouter 'check tonal' final."
+
+  - key: clarity_delta
+    label: "Clarté perçue (delta %)"
+    target: ">= 0.30"
+    severity: "medium"
+    source: "metrics/kpi_log.json:output.clarity_delta"
+    definition: "Amélioration perçue de clarté de com (+30% visé)."
+    remediation: "Structurer avec bullets courtes, CTA unique, header final."
+
+  - key: semantic_error_rate
+    label: "Taux d’erreurs sémantiques"
+    target: "<= 0.05"
+    severity: "high"
+    source: "metrics/kpi_log.json:output.semantic_error_rate"
+    definition: "Proportion de sorties avec contresens/erreur de faits."
+    remediation: "Ajouter étape 'verify facts', citer sources, réduire extrapolations."
+
+  # =========================
+  # 4) Meta (santé du pack)
+  # =========================
+  - key: ci_markdown_green
+    label: "CI Markdown verte"
+    target: "== 1.0"
+    severity: "high"
+    source: "workflow:docs-ci.yml"
+    definition: "Lint OK sur tous les .md/.yml en main."
+    remediation: "Corriger front-matter, titres, liens cassés."
+
+  - key

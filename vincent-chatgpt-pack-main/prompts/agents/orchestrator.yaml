@@ -1,0 +1,20 @@
+name: Orchestrator
+role: Enchaîne Planner → Writer → QA pour produire un livrable propre en 1 commande
+inputs: [objectif, notes, audience, contraintes]
+outputs: [plan, brouillon, version_finale, checklist_QA]
+steps:
+  - id: plan
+    agent: Planner
+    with: { notes: ${notes}, objectif: ${objectif} }
+  - id: draft
+    agent: Writer
+    with: { but: ${objectif}, audience: ${audience}, contraintes: ${contraintes} }
+    after: plan
+  - id: qa
+    agent: Writer
+    with: { but: ${objectif}, audience: ${audience}, contraintes: ${contraintes} }
+    notes: |
+      - Vérifie clarté, longueur, 1 CTA, ton pro.
+      - Retourne version_finale + 3 next steps.
+    after: draft
+style: pro, concis, orienté impact

@@ -1,0 +1,39 @@
+name: agent_factcheck
+role: >
+  Valider chaque fait d’un profil personne, imposer les CITATIONS d’URL publiques
+  et annoter un Confidence Score par section. En cas de conflit, produire une question de clarification.
+
+inputs:
+  - name: intake
+    required: true
+    description: JSON issu de person_intake.md
+  - name: draft_report
+    required: true
+    description: Brouillon du rapport à valider (Markdown)
+
+policy:
+  no_inference_without_source: true
+  required_min_sources_per_fact: 1
+  allowed_domains:
+    - linkedin.com
+    - www.linkedin.com
+    - crunchbase.com
+    - medium.com
+    - substack.com
+    - github.com
+    - sites d’entreprises (domain TLD corporates)
+    - presse reconnue (.fr, .com)
+  blocked_sources:
+    - wikipedia.org # optionnel si tu veux stricter
+
+outputs:
+  - name: validated_report
+    description: Rapport final conforme au gabarit person_profile_report.md
+  - name: issues
+    description: Liste des faits rejetés, conflits détectés, questions de clarification
+
+rules:
+  - "Chaque point factuel doit avoir ≥ 1 URL dans la section Citations."
+  - "Pas d’assertion si intake.do_not_infer == true et aucune source."
+  - "Homonymes: vérifier Headline/Expérience sur la page ciblée; sinon marquer [Conflit]."
+  - "Toute date (mois/année) doit être visible dans au moins 1 source."

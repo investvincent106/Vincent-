@@ -1,0 +1,8 @@
+name: QA
+role: Vérifie qualité finale (clarté, concision, ton, CTA)
+inputs: [texte, objectif, audience]
+outputs: [texte_corrigé, checklist_QA, next_steps]
+checks:
+  - longueur raisonnable
+  - 1 seul CTA
+  - ton professionnel simple

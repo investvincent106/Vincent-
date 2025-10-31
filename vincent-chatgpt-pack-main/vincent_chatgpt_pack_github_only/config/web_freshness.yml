@@ -1,0 +1,15 @@
+---
+name: web_freshness_config
+owner: Max
+last_review: 2025-10-31
+---
+
+# Configuration runtime pour Web Freshness
+# Contrôles la vérification publique automatique pour les person profiles
+
+auto_verify_public: true    # si true, le hook effectuera automatiquement une recherche publique (QDF=5) sans demander la permission explicite
+require_explicit_consent: false  # si true, demande la confirmation utilisateur avant recherche publique (mode précédent)
+max_age_days: 30            # âge max des sources pour considérer la donnée 'fresh'
+fallback_on_gated: manual  # si le profil est derrière login (LinkedIn), fallback: 'manual' -> demander copy/paste, 'scraper' -> tenter scraper externe
+log_policy_tag: web-freshness-v2.1
+opt_out_param: require_consent  # nom du param qui permet d'activer le comportement 'ask user' si nécessaire

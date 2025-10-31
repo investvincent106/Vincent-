@@ -1,0 +1,271 @@
+[
+  {
+    "file": "prompts/gold/README.md",
+    "tags": [
+      "guide",
+      "readme"
+    ],
+    "triggers": [
+      "guide"
+    ],
+    "intents": [
+      "meta"
+    ]
+  },
+  {
+    "file": "prompts/gold/README_FULL.md",
+    "tags": [
+      "guide",
+      "readme"
+    ],
+    "triggers": [
+      "guide"
+    ],
+    "intents": [
+      "meta"
+    ]
+  },
+  {
+    "file": "prompts/gold/ads.md",
+    "tags": [
+      "ads",
+      "campaign",
+      "paid"
+    ],
+    "triggers": [
+      "campagne payante",
+      "google ads",
+      "meta ads"
+    ],
+    "intents": [
+      "ads"
+    ]
+  },
+  {
+    "file": "prompts/gold/analysis.md",
+    "tags": [
+      "analysis",
+      "audit",
+      "diagnostic"
+    ],
+    "triggers": [
+      "analyse",
+      "audit",
+      "diagnostic"
+    ],
+    "intents": [
+      "analysis"
+    ]
+  },
+  {
+    "file": "prompts/gold/automation.md",
+    "tags": [
+      "automation",
+      "process",
+      "workflow"
+    ],
+    "triggers": [
+      "automatiser",
+      "process",
+      "workflow"
+    ],
+    "intents": [
+      "automation"
+    ]
+  },
+  {
+    "file": "prompts/gold/content_seo.md",
+    "tags": [
+      "content",
+      "keywords",
+      "seo"
+    ],
+    "triggers": [
+      "brief seo",
+      "mots-clés",
+      "optimisation",
+      "seo"
+    ],
+    "intents": [
+      "content_seo"
+    ]
+  },
+  {
+    "file": "prompts/gold/creativity.md",
+    "tags": [
+      "creativity",
+      "idées",
+      "story"
+    ],
+    "triggers": [
+      "angle créatif",
+      "idée",
+      "storytelling"
+    ],
+    "intents": [
+      "creativity"
+    ]
+  },
+  {
+    "file": "prompts/gold/customer_support.md",
+    "tags": [
+      "csat",
+      "faq",
+      "support"
+    ],
+    "triggers": [
+      "FAQ",
+      "SAV",
+      "support"
+    ],
+    "intents": [
+      "customer_support"
+    ]
+  },
+  {
+    "file": "prompts/gold/daily_life.md",
+    "tags": [
+      "perso",
+      "quotidien"
+    ],
+    "triggers": [
+      "checklist",
+      "routine"
+    ],
+    "intents": [
+      "daily_life"
+    ]
+  },
+  {
+    "file": "prompts/gold/demos_onboarding.md",
+    "tags": [
+      "demo",
+      "onboarding",
+      "script"
+    ],
+    "triggers": [
+      "demo",
+      "onboarding",
+      "script demo"
+    ],
+    "intents": [
+      "demos_onboarding"
+    ]
+  },
+  {
+    "file": "prompts/gold/email_marketing.md",
+    "tags": [
+      "cold",
+      "email",
+      "follow-up"
+    ],
+    "triggers": [
+      "email",
+      "newsletter",
+      "relance",
+      "sequence"
+    ],
+    "intents": [
+      "email_marketing"
+    ]
+  },
+  {
+    "file": "prompts/gold/general_productivity.md",
+    "tags": [
+      "focus",
+      "priorités",
+      "productivity"
+    ],
+    "triggers": [
+      "méthode",
+      "organisation",
+      "priorités"
+    ],
+    "intents": [
+      "productivity"
+    ]
+  },
+  {
+    "file": "prompts/gold/landing_pages.md",
+    "tags": [
+      "conversion",
+      "copy",
+      "landing"
+    ],
+    "triggers": [
+      "conversion",
+      "cta",
+      "hero",
+      "landing",
+      "page"
+    ],
+    "intents": [
+      "landing_pages"
+    ]
+  },
+  {
+    "file": "prompts/gold/market_research.md",
+    "tags": [
+      "market",
+      "persona",
+      "research"
+    ],
+    "triggers": [
+      "ICP",
+      "personas",
+      "recherche marché"
+    ],
+    "intents": [
+      "market_research"
+    ]
+  },
+  {
+    "file": "prompts/gold/misc_business.md",
+    "tags": [
+      "business",
+      "divers"
+    ],
+    "triggers": [
+      "idée business",
+      "process"
+    ],
+    "intents": [
+      "business_misc"
+    ]
+  },
+  {
+    "file": "prompts/gold/sales.md",
+    "tags": [
+      "b2b",
+      "prospection",
+      "vente"
+    ],
+    "triggers": [
+      "appel d'offre",
+      "closing",
+      "devis",
+      "prospection",
+      "relance"
+    ],
+    "intents": [
+      "outreach",
+      "sales"
+    ]
+  },
+  {
+    "file": "prompts/gold/writing.md",
+    "tags": [
+      "style",
+      "ton",
+      "écriture"
+    ],
+    "triggers": [
+      "rédige",
+      "réécris",
+      "tone of voice"
+    ],
+    "intents": [
+      "writing"
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "last_update": "2025-10-29T00:00:00Z",
+    "notes": "Valeurs initiales placeholder. Mettre à jour au fil de l’eau."
+  },
+  "performance": {
+    "auto_boot_rate": 0.00,
+    "startup_time_seconds": 0,
+    "routine_completion_rate": 0.00,
+    "response_latency_seconds": 0,
+    "connector_uptime": 1.00
+  },
+  "adoption": {
+    "weekly_active_sessions": 0,
+    "user_feedback_score": 0.0,
+    "new_prompts_per_month": 0
+  },
+  "output": {
+    "time_saved_minutes_per_task": 0,
+    "acceptance_rate": 0.00,
+    "clarity_delta": 0.00,
+    "semantic_error_rate": 0.00
+  }
+}

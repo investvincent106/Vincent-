@@ -1,0 +1,16 @@
+name: Docs CI
+on:
+  push:
+    paths: ["**/*.md","**/*.yaml","**/*.yml"]
+  pull_request:
+    paths: ["**/*.md","**/*.yaml","**/*.yml"]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@v17
+        with:
+          globs: |
+            **/*.md
